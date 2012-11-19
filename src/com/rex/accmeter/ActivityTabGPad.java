@@ -17,45 +17,25 @@
 package com.rex.accmeter;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import com.rex.accmeter.R;
 
-public class TabGraphActivity extends Activity implements OnClickListener {
+public class ActivityTabGPad extends Activity {
 
 	static final private boolean DEBUG = true;
-	static final private String TAG = "RaxLog";
+	static final private String TAG = "RexLog";
 	
-	public TabGraphActivity() {
-	}
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (DEBUG) Log.v(TAG, "GraphActivity::onCreate");
+		if (DEBUG) Log.v(TAG, "ActivityTabGPad::onCreate");
 		
-		setContentView(R.layout.graph_activity);
-		
-		((Button) findViewById(R.id.btn_start_graph)).setOnClickListener(this);
-		
+		setContentView(R.layout.activity_gpad);
 	}
 	
 	@Override
 	public void onBackPressed() {
 		getParent().onBackPressed();
-	}
-
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.btn_start_graph:
-			Intent intent = new Intent(this, GraphActivity.class);
-			startActivity(intent);
-			break;
-		}
 	}
 }

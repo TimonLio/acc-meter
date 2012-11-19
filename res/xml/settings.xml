@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/app_name">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_name" >
 
-    <CheckBoxPreference
-            android:key="CONF_SHOW_SPLASH"
+    <PreferenceCategory android:title="@string/conf_category_title" >
+        <CheckBoxPreference
             android:defaultValue="true"
-            android:title="@string/conf_show_splash"
-            android:summary="@string/conf_show_splash_summary" />
-            
-    <CheckBoxPreference
-            android:key="CONF_ALLOW_LOCK_SCREEN"
+            android:key="CONF_ENABLE_TRACKING"
+            android:summary="@string/conf_enable_tracking_summary"
+            android:title="@string/conf_enable_tracking" />
+        <CheckBoxPreference
             android:defaultValue="false"
-            android:title="@string/conf_allow_lock_screen"
-            android:summary="@string/conf_allow_lock_screen_summary" />
+            android:key="CONF_ENABLE_KEEP_SCREEN_ON"
+            android:summary="@string/conf_enable_keep_screen_on_summary"
+            android:title="@string/conf_enable_keep_screen_on" />
+    </PreferenceCategory>
 
-	<CheckBoxPreference
-            android:key="CONF_ALLOW_TRACKING"
-            android:defaultValue="true"
-            android:title="@string/conf_allow_tracking"
-            android:summary="@string/conf_allow_tracking_summary" />
-            
 </PreferenceScreen>

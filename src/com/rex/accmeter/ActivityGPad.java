@@ -16,15 +16,22 @@
 
 package com.rex.accmeter;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
+import android.util.Log;
 import com.rex.accmeter.R;
 
-public class SettingActivity extends PreferenceActivity {
+public class ActivityGPad extends Activity {
+
+	static final private boolean DEBUG = true;
+	static final private String TAG = "RexLog";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		if (DEBUG) Log.v(TAG, "ActivityGPad::onCreate");
+		
+		setContentView(R.layout.activity_gpad);
+	}
 	
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);		
-        addPreferencesFromResource(R.xml.settings);
-    }
 }

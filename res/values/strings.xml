@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
+<!--
+     Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,30 +15,35 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">"Rax Accelerate Meter"</string>
-    
+
+    <string name="app_name">"Rex Accelerate Meter"</string>
+
+    <!-- Tabs -->
     <string name="tab_gpad">"G-Pad"</string>
     <string name="tab_graph">"Graph"</string>
 
+    <!-- Buttons -->
     <string name="btn_switch_to_graph">"Start"</string>
     <string name="btn_switch_to_gpad">"Start"</string>
-    
-    <string name="conf_show_splash">"Show splash screen"</string>
-    <string name="conf_show_splash_summary">"Show splash screen when launch app"</string>
-    <string name="conf_allow_lock_screen">"Allow lock screen"</string>
-    <string name="conf_allow_lock_screen_summary">"Allow lock screen when metering"</string>
-    <string name="conf_allow_tracking">"Help improve usage"</string>
-    <string name="conf_allow_tracking_summary">"Help improve this product by submitting anonymous usage data"</string>
-    
-	<string name="menu_about">"About"</string>
+
+    <!-- Config settins -->
+    <string name="conf_category_title">"Setting"</string>
+    <string name="conf_enable_keep_screen_on">"Keep screen on"</string>
+    <string name="conf_enable_keep_screen_on_summary">"Keep screen on while using this app, take effect after next launch"</string>
+    <string name="conf_enable_tracking">"Help improve usage"</string>
+    <string name="conf_enable_tracking_summary">"Help improve this product by submitting anonymous usage data"</string>
+
+    <!-- About -->
+    <string name="about_category_title">"About"</string>
+    <string name="about_app_summary">"© 2012 RexStudio All rights reserved."</string>
+    <string name="about_version_title">"Version"</string>
+    <string name="about_version_summary">"%1$s"</string>
+
+    <!-- Toast -->
+    <string name="toast_quit">"Press again to quit"</string>
+
+    <!-- Menu -->
+    <string name="menu_about">"About"</string>
     <string name="menu_setting">"Setting"</string>
-    <string name="menu_feedback">"Feedback"</string>
-    
-    <string name="dlg_quit_confirm_title">"Notice"</string>
-    <string name="dlg_quit_confirm_message">"Are you sure you want to exit?"</string>
-    
-    <string name="about_version_info">"Version %1$s r%2$s"</string>
-	<string name="about_copyright">"©2012-2012 All rights reserved."</string>
-	<string name="about_summary">""</string>
-    
+
 </resources>

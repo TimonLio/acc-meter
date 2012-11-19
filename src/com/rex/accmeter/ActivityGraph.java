@@ -22,21 +22,18 @@ import android.os.Bundle;
 import android.util.Log;
 import com.rex.accmeter.R;
 
-public class GraphActivity extends Activity {
+public class ActivityGraph extends Activity {
 
 	static final private boolean DEBUG = true;
-	static final private String TAG = "RaxLog";
+	static final private String TAG = "RexLog";
 	
     private SensorManager mSensorManager;
     private GraphView mGraphView;
     
-	public GraphActivity() {
-	}
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (DEBUG) Log.v(TAG, "GraphActivity::onCreate");
+		if (DEBUG) Log.v(TAG, "ActivityGraph::onCreate");
 		
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mGraphView = new GraphView(this);
@@ -46,7 +43,7 @@ public class GraphActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (DEBUG) Log.v(TAG, "GraphActivity::onResume");
+        if (DEBUG) Log.v(TAG, "ActivityGraph::onResume");
         mSensorManager.registerListener(mGraphView, 
                 SensorManager.SENSOR_ACCELEROMETER | 
                 SensorManager.SENSOR_MAGNETIC_FIELD | 
@@ -56,7 +53,7 @@ public class GraphActivity extends Activity {
     
     @Override
     protected void onStop() {
-    	if (DEBUG) Log.v(TAG, "GraphActivity::onStop");
+    	if (DEBUG) Log.v(TAG, "ActivityGraph::onStop");
         mSensorManager.unregisterListener(mGraphView);
         super.onStop();
     }

@@ -17,43 +17,41 @@
 package com.rex.accmeter;
 
 import android.app.Activity;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import com.rex.accmeter.R;
 
-public class AboutActivity extends Activity {
+public class ActivityTabGraph extends Activity implements OnClickListener {
 
 	static final private boolean DEBUG = true;
-	static final private String TAG = "RaxLog";
-
-	public AboutActivity() {
-	}
-
+	static final private String TAG = "RexLog";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (DEBUG) Log.v(TAG, "AboutActivity::onCreate");
-		setContentView(R.layout.about_activity);
+		if (DEBUG) Log.v(TAG, "ActivityTabGraph::onCreate");
+		
+		setContentView(R.layout.activity_graph);
+		
+		((Button) findViewById(R.id.btn_start_graph)).setOnClickListener(this);
+	}
+	
+	@Override
+	public void onBackPressed() {
+		getParent().onBackPressed();
 	}
 
 	@Override
-	protected void onStart() {
-		if (DEBUG) Log.v(TAG, "AboutActivity::onStart");
-
-		try {
-			PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-			((TextView) findViewById(R.id.about_version_info)).setText(String
-					.format(getResources().getString(
-							R.string.about_version_info),
-							packageInfo.versionName, packageInfo.versionCode));
-		} catch (NameNotFoundException ex) {
-			Log.e(TAG, "AboutActivity::onStart " + ex.getMessage());
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btn_start_graph:
+			Intent intent = new Intent(this, ActivityGraph.class);
+			startActivity(intent);
+			break;
 		}
-
-		super.onStart();
 	}
-
 }

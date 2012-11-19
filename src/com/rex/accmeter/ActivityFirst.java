@@ -17,24 +17,27 @@
 package com.rex.accmeter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import com.rex.accmeter.R;
 
-public class GPadActivity extends Activity {
+public class ActivityFirst extends Activity {
 
-	static final private boolean DEBUG = true;
-	static final private String TAG = "RaxLog";
+	static final private boolean DEBUG = false;
+	static final private String TAG = "RexLog";
 	
-	public GPadActivity() {
-	}
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (DEBUG) Log.v(TAG, "GPadActivity::onCreate");
-		
-		setContentView(R.layout.gpad_activity);
+		if (DEBUG) Log.v(TAG, "ActivityFirst::onCreate");
+		startMain();
+		setContentView(R.layout.activity_first);
 	}
 	
+	private void startMain() {
+		if (DEBUG) Log.v(TAG, "ActivityFirst::startMain");
+		Intent intent = new Intent(ActivityFirst.this, ActivityMain.class);
+		startActivity(intent);
+		finish();
+	}
 }

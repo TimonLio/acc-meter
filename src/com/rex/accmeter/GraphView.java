@@ -28,11 +28,10 @@ import android.hardware.SensorManager;
 import android.view.View;
 import com.rex.accmeter.R;
 
-public class GraphView extends View implements SensorListener
-{
+public class GraphView extends View implements SensorListener {
 	
 	static final private boolean DEBUG = true;
-	static final private String TAG = "RaxLog";
+	static final private String TAG = "RexLog";
 
     private Bitmap  mBitmap;
     private Paint   mPaint = new Paint();

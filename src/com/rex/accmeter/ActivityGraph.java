@@ -20,7 +20,6 @@ import android.app.Activity;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-import com.rex.accmeter.R;
 
 public class ActivityGraph extends Activity {
 
